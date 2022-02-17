@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/anime.min.js"></script>
+    <style>
+        .letter {
+            display: inline-block;
+            opacity: 0;
+        }
+
+        div {
+            display: inline-block;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <span class="letter">A</span>
+        <span class="letter">N</span>
+        <span class="letter">I</span>
+        <span class="letter">M</span>
+        <span class="letter">E</span>
+        <div></div>
+        <span class="letter">I</span>
+        <span class="letter">S</span>
+        <div></div>
+        <span class="letter">C</span>
+        <span class="letter">O</span>
+        <span class="letter">O</span>
+        <span class="letter">L</span>
+        <span class="letter">!</span>
+    </h1>
+
+
+</body>
+<script>
+    let animation = anime({
+        targets: '.letter',
+        opacity: 1,
+        translateY: 50,
+        rotate: {
+            value: 360,
+            duration: 2000,
+            easing: 'easeInExpo'
+        },
+        scale: anime.stagger([0.7, 1], {
+            from: 'center'
+        }),
+        delay: anime.stagger(100, {
+            start: 1000
+        }),
+        translateX: [-10, 30]
+    });
+</script>
+
+</html>
